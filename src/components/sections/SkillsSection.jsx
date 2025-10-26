@@ -1,32 +1,16 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import laravelIcon from "../../assets/laravel.png";
-import mernIcon from "../../assets/mern.png";
-import reactIcon from "../../assets/vite.svg";
-import tailwindIcon from "../../assets/tailwindcss.png";
-//import pythonIcon from "/src/assets/python.svg";
-import wordpressIcon from "../../assets/Wordpress.svg";
-import bootstrapIcon from "../../assets/Bootstrap.svg";
-import threeJsIcon from "../../assets/Threejs.svg";
-import cIcon from "../../assets/CL.png";
-import jsIcon from "../../assets/js.svg";
-import phpIcon from "../../assets/php.svg";
-import htmlIcon from "../../assets/HTML.svg";
-import cssIcon from "../../assets/Css.svg";
-import { style } from "framer-motion/client";
 
-// Note: Import your actual icons here
-// These are just placeholders for the implementation
+// Removed all unused local asset imports
+
 const skillsData = [
   // Full-Stack & Frameworks (High Priority)
   {
     name: "MERN Stack",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     color: "#00D8FF",
-    style: {
-      borderRadius: "100%",
-    },
+    style: { borderRadius: "100%" },
   },
   {
     name: "Laravel",
@@ -121,25 +105,16 @@ const skillsData = [
   {
     name: "AI Tools",
     icon: "https://static.vecteezy.com/system/resources/previews/022/227/364/non_2x/openai-chatgpt-logo-icon-free-png.png",
-    color: "#10A37F", // ChatGPT brand color
+    color: "#10A37F",
   },
 ];
 
 const Skills = () => {
-  // Use the intersection observer hook to trigger animations when section is in view
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
-
-  // Initialize animation controls
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
   const controls = useAnimation();
 
-  // Start animations when section comes into view
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
+    if (inView) controls.start("visible");
   }, [controls, inView]);
 
   return (
@@ -171,16 +146,14 @@ const Skills = () => {
             hidden: { opacity: 0 },
             visible: {
               opacity: 1,
-              transition: {
-                staggerChildren: 0.1,
-              },
+              transition: { staggerChildren: 0.1 },
             },
           }}
           initial="hidden"
           animate={controls}
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"
         >
-          {skillsData.map((skill, index) => (
+          {skillsData.map((skill) => (
             <motion.div
               key={skill.name}
               variants={{
@@ -188,15 +161,11 @@ const Skills = () => {
                 visible: {
                   opacity: 1,
                   y: 0,
-                  transition: {
-                    duration: 0.4,
-                    ease: "easeOut",
-                  },
+                  transition: { duration: 0.4, ease: "easeOut" },
                 },
               }}
               className="flex flex-col items-center"
             >
-              {/* Icon Wrapper with Glowing Effect */}
               <motion.div
                 whileHover={{
                   scale: 1.1,
@@ -205,7 +174,6 @@ const Skills = () => {
                 }}
                 className="relative w-20 h-20 mb-4 rounded-2xl bg-gray-800 p-4 flex items-center justify-center shadow-lg border border-gray-700 overflow-hidden group"
               >
-                {/* Animated background on hover */}
                 <motion.div
                   className="absolute inset-0 opacity-0 group-hover:opacity-20 bg-gradient-to-br"
                   style={{
@@ -213,8 +181,6 @@ const Skills = () => {
                   }}
                   whileHover={{ opacity: 0.2 }}
                 />
-
-                {/* The actual rotating icon */}
                 <motion.div
                   whileHover={{
                     rotate: 360,
@@ -227,20 +193,14 @@ const Skills = () => {
                   }}
                   className="relative z-10 w-full h-full flex items-center justify-center"
                 >
-                  {/* Placeholder for actual icons */}
-
-                  <div>
-                    <img
-                      src={skill.icon}
-                      alt={skill.name}
-                      className="w-10 h-10"
-                      style={skill.style} // Apply inline styles properly
-                    />
-                  </div>
+                  <img
+                    src={skill.icon}
+                    alt={skill.name}
+                    className="w-10 h-10"
+                    style={skill.style}
+                  />
                 </motion.div>
               </motion.div>
-
-              {/* Skill Name with Hover Animation */}
               <motion.span
                 className="text-gray-300 text-sm font-medium text-center"
                 whileHover={{
