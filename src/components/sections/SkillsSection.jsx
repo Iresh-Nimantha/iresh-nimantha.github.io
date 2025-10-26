@@ -5,16 +5,15 @@ import laravelIcon from "../../assets/laravel.png";
 import mernIcon from "../../assets/mern.png";
 import reactIcon from "../../assets/vite.svg";
 import tailwindIcon from "../../assets/tailwindcss.png";
-import pythonIcon from "../../assets/Python.svg";
-import wordpressIcon from "../../assets/wordpress.svg";
+//import pythonIcon from "/src/assets/python.svg";
+import wordpressIcon from "../../assets/Wordpress.svg";
 import bootstrapIcon from "../../assets/Bootstrap.svg";
 import threeJsIcon from "../../assets/Threejs.svg";
 import cIcon from "../../assets/CL.png";
 import jsIcon from "../../assets/js.svg";
 import phpIcon from "../../assets/php.svg";
 import htmlIcon from "../../assets/HTML.svg";
-import cssIcon from "../../assets/css.svg";
-import vueIcon from "../../assets/vue.svg";
+import cssIcon from "../../assets/Css.svg";
 import { style } from "framer-motion/client";
 
 // Note: Import your actual icons here
@@ -23,82 +22,106 @@ const skillsData = [
   // Full-Stack & Frameworks (High Priority)
   {
     name: "MERN Stack",
-    icon: mernIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     color: "#00D8FF",
     style: {
-      borderRadius: "100%", // Rounded corners for a softer look
+      borderRadius: "100%",
     },
   },
   {
     name: "Laravel",
-    icon: laravelIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
     color: "#FF2D20",
   },
   {
     name: "React.js",
-    icon: reactIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     color: "#61DAFB",
-  }, {
-    name: "Vue.js",
-    icon: vueIcon,
-    color: "#66ff99",
   },
+  {
+    name: "Next.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    color: "#000000",
+  },
+  {
+    name: "Vue.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+    color: "#4FC08D",
+  },
+
   // Backend & Server-Side Languages
   {
     name: "PHP",
-    icon: phpIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
     color: "#777BB4",
   },
   {
     name: "Python",
-    icon: pythonIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     color: "#3776AB",
   },
   {
     name: "C",
-    icon: cIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
     color: "#A8B9CC",
+  },
+  {
+    name: "Kotlin",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+    color: "#7F52FF",
+  },
+
+  // Automation & Workflow
+  {
+    name: "N8N",
+    icon: "https://registry.npmmirror.com/@lobehub/icons-static-png/1.74.0/files/dark/n8n-color.png",
+    color: "#EA4B71",
   },
 
   // Styling & UI Libraries
   {
     name: "Bootstrap CSS",
-    icon: bootstrapIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
     color: "#7952B3",
   },
   {
     name: "Tailwind CSS",
-    icon: tailwindIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
     color: "#38B2AC",
   },
 
   // Core Frontend Technologies
   {
     name: "JavaScript",
-    icon: jsIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     color: "#F7DF1E",
   },
   {
     name: "HTML",
-    icon: htmlIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     color: "#E34F26",
   },
   {
     name: "CSS",
-    icon: cssIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     color: "#1572B6",
   },
 
   // Specialized & CMS
   {
     name: "Three.js",
-    icon: threeJsIcon,
-    color: "#ffffff",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg",
+    color: "#000000",
   },
   {
     name: "WordPress",
-    icon: wordpressIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg",
     color: "#21759B",
+  },
+  {
+    name: "AI Tools",
+    icon: "https://static.vecteezy.com/system/resources/previews/022/227/364/non_2x/openai-chatgpt-logo-icon-free-png.png",
+    color: "#10A37F", // ChatGPT brand color
   },
 ];
 
