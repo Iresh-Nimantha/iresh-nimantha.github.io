@@ -518,7 +518,7 @@ export const mobileProjects = [
     desc: "A comprehensive farming guide application for Sri Lankan farmers with multi-language support, market price tracking, and push notifications.",
     subdesc:
       "Built with Kotlin and Java in Android Studio. Features Firebase Authentication, Firebase Cloud Messaging for push notifications, multi-language support (Sinhala, Tamil, English), price calculation tools, farming guides with PDF generation, market price displays, and location-based services. Includes selling activity forms, notifications system, and seamless language switching.",
-    href: "https://github.com/Iresh-Nimantha/Koratuwa",
+    href: "https://github.com/Iresh-Nimantha/koratuwa-mobile-app",
     linkedin: "https://www.linkedin.com/in/your-profile",
     texture: koratuwatexture,
     texture2: koratuwatexture2,
