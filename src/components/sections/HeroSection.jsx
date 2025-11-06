@@ -49,7 +49,7 @@ function HeroSection() {
       </div>
 
       {/* Main content */}
-      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 z-10 px-4 sm:px-6 lg:px-8">
+      {/* <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 z-10 px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -85,7 +85,7 @@ function HeroSection() {
             </span>
           </div>
         </motion.div>
-      </div>
+      </div> */}
 
       {/* 3D Scene */}
       <div
@@ -120,28 +120,44 @@ function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center items-center text-white/50 text-sm">
+      <div
+        className="w-full mx-auto flex flex-col sm:mt-36 mt-20 z-10 px-4 sm:px-6 lg:px-8"
+        style={{ pointerEvents: "none" }} // ✅ add this
+      >
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
-          className="flex flex-col items-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
         >
-          <span className="mb-2">Scroll Down</span>
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+          <div className="inline-block mb-2 px-4 py-1 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-full text-sm font-mono text-white">
+            Full-Stack Developer | Undergraduate ICT Student
+          </div>
+
+          <h1 className="sm:text-4xl text-3xl font-bold text-white text-center font-generalsans mb-2">
+            Hi, I'm Iresh Nimantha
+            <span className="waving-hand animate-wave">👋</span>
+          </h1>
+
+          <div
+            className={`font-medium text-white text-center  ${
+              isSmall ? "text-xl" : isMobile ? "text-2xl" : "text-3xl"
+            } mb-20`}
           >
-            <path
-              d="M12 5V19M12 19L5 12M12 19L19 12"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+            <span>I'm a </span>
+            <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 pb-96">
+              <TypewriterComponent
+                options={{
+                  strings: ["developer", "digital architect", "tech innovator"],
+                  autoStart: true,
+                  loop: true,
+                  delay: 75,
+                  deleteSpeed: 50,
+                  cursor: "|",
+                }}
+              />
+            </span>
+          </div>
         </motion.div>
       </div>
 
