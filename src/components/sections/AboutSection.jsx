@@ -70,11 +70,13 @@ const AboutMe = () => {
               </h3>
 
               <p className="text-gray-300 mb-6 leading-relaxed">
-                I am an undergraduate student at the University of Colombo,
-                Faculty of Technology, Honours in Bachelor of Information
-                and Communication Technology (BICT). I love creating innovative
-                web solutions and exploring new technologies.
-              </p>
+  I am an undergraduate student at the University of Colombo, Faculty of Technology,
+  pursuing an Honours degree in Bachelor of Information and Communication Technology (BICT).
+  I’m passionate about full-stack web development and constantly explore the integration of 
+  emerging technologies like Artificial Intelligence, automation, and cloud computing to build 
+  intelligent, future-ready digital solutions.
+</p>
+
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                 <div className="flex items-start space-x-3">
